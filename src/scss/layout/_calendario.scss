@@ -1,0 +1,74 @@
+.lineup {
+    background-image: radial-gradient(circle, #f53756, #fd6490, #fa8ec1, #f2b4e3, #efd7f7, #efd7f7, #efd7f7, #efd7f7, #f2b4e3, #fa8ec1, #fd6490, #f53756);
+    padding: $separacion 0;
+
+    h3,
+    p {
+        text-align: center;
+        color: $negro;
+    }
+
+    .dia {
+        text-transform: uppercase;
+        margin: $separacion 0;
+        color: $blanco;
+    }
+
+}
+
+.escenarios-contenedor {
+    @include tablet {
+        @include grid(2, $separacion)
+    }
+
+
+
+
+    .nombre-escenario {
+        color: $negro;
+        font-size: 2rem;
+        font-weight: $Regular;
+
+
+    }
+
+}
+
+.escenario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    .imagen-calendario {
+        width: 20rem;
+    }
+
+}
+
+.calendario {
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+
+    li {
+        padding: $separacion;
+        font-weight: $bold;
+
+        span {
+            font-weight: $Regular;
+        }
+    }
+
+}
+
+.bg-verde .calendario li:nth-child(odd) {
+    background-color: darken($color: $verde, $amount: 10);
+
+}
+
+.bg-amarillo .calendario li:nth-child(odd) {
+    background-color: darken($color: $amarillo, $amount: 10);
+}
