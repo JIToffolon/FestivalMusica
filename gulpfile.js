@@ -1,9 +1,9 @@
 const { series, src, dest, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat')
-const paths = {
-    js: 'src/js/**/*.js'
-}
+// const paths = {
+//     js: 'src/js/**/*.js'
+// }
 
 //utilidades css
 
@@ -17,6 +17,10 @@ const sourcemaps = require('gulp-sourcemaps');
 const terser = require('gulp-terser-js');
 const rename = require('gulp-rename');
 
+const paths = {
+    js: 'src/js/**/*.js',
+    scss: 'src/scss/app.scss'
+};
 
 //Funcion que compila SASS
 
@@ -48,18 +52,28 @@ function javascript() {
         .pipe(dest('./build/js'))
 }
 
-function watchArchivos() {
+// function watchArchivos() {
 
-    watch('src/scss/**/*.scss', css);
-    watch(paths.js, javascript) // *= la carpeta actual // **= todos los archivos con esa extension
+//     watch('src/scss/**/*.scss', css);
+//     watch(paths.js, javascript) // *= la carpeta actual // **= todos los archivos con esa extension
+// }
+
+function watchArchivos() {
+    watch(paths.scss, css);
+    watch(paths.js, javascript);
 }
 
+// exports.css = css;
+// // exports.minificarcss = minificarcss;
+// exports.watchArchivos = watchArchivos;
 
-exports.css = css;
-// exports.minificarcss = minificarcss;
-exports.watchArchivos = watchArchivos;
+// exports.default = series(css, javascript, watchArchivos);
 
-exports.default = series(css, javascript, watchArchivos);
+// Tarea build que llama a css y javascript
+exports.build = series(css, javascript);
+exports.watch = watchArchivos;
 
+// Tarea por defecto
+exports.default = series(exports.build, watchArchivos);
 
 
