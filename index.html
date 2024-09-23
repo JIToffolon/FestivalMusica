@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../FestivalMusica-main/build/css/app.css">
+    <title>Rock & EDM Festival</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <h1>Rock & EDM Festival</h1>
+            <nav class="navegacion-principal">
+                <a href="#lineup">Line up</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#boletos">Boletos</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Rock & EDM Festival
+                    <span>Julio 2024, Buenos Aires, Argentina</span>
+                </h2>
+            </div>
+        </div>
+        <video controls autoplay muted loop>
+            <!-- el parametro muted es para que se reprodusca en chrome/ el parametro loop es para que se reproduzca infinitamente -->
+            <!-- controls le da los botones de play y demas al video/ autoplay hace que se reproduzca solo -->
+            <source src="../FestivalMusica-main/video/concierto.mp4" type="video/mp4">
+            <source src="../FestivalMusica-main/video/concierto.ogg" type="video/ogg">
+            <source src="../FestivalMusica-main/video/concierto.webm" type="video/webm">
+            <!-- los diferentes tipos de formato de video es para tener cobertura para todos los navegadores -->
+        </video>
+    </div>
+
+    <div class="sobre-festival contenedor">
+        <div class="imagen">
+            <img src="./src/img/imagen_vocalista.jpg" alt="imagen-vocalista">
+        </div>
+
+        <div class="contenido-festival">
+            <h2>Rock EDM & Festival</h2>
+            <p class="fecha">Julio 2024, Buenos Aires, Argentina</p>
+            <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, labore eligendi. Quidem
+                ipsam expedita
+                officiis</p>
+        </div>
+    </div>
+
+    <section id="lineup" class="lineup">
+
+        <h3>
+            Line Up
+        </h3>
+
+        <p class="dia">Viernes 4</p>
+
+        <div class="escenarios-contenedor contenedor">
+            <div class="escenario rock bg-amarillo">
+                <p class="nombre-escenario">Escenario Rock</p>
+                <img class="imagen-calendario" src="./src/img/icono_rock.png" alt="icono-rock">
+                <ul class="calendario">
+                    <li>24:00hs | <span>Metallica</span></li>
+                    <li>22:00hs | <span>Led Zepellin</span></li>
+                    <li>20:00hs | <span>Perl Jam</span></li>
+                    <li>19:00hs | <span>The Rolling Stones</span></li>
+                    <li>18:00hs | <span>Yes</span></li>
+                    <li>17:00hs | <span>Linkin Park</span></li>
+                </ul>
+            </div>
+            <div class="escenario edm bg-verde">
+                <p class="nombre-escenario">Escenario EDM</p>
+                <img class="imagen-calendario" src="./src/img/icono_edm.png" alt="icono-edm">
+                <ul class="calendario">
+                    <li>16:00hs | <span>Kendrick Lamar</span></li>
+                    <li>15:00hs | <span>Duki</span></li>
+                    <li>14:00hs | <span>Acru</span></li>
+                    <li>13:00hs | <span>YSY A</span></li>
+                    <li>12:00hs | <span>Milo J</span></li>
+                    <li>11:00hs | <span>Trueno</span></li>
+                </ul>
+            </div>
+        </div>    
+
+            <p class="dia">Sabado 5</p>
+            <div class="escenarios-contenedor contenedor">
+                <div class="escenario edm bg-verde">
+                    <p class="nombre-escenario">Escenario EDM</p>
+                    <img class="imagen-calendario" src="./src/img/icono_edm.png" alt="icono-edm">
+                    <ul class="calendario">
+                        <li>24:00hs | <span>Eminem</span></li>
+                        <li>22:00hs | <span>Kase.O</span></li>
+                        <li>20:00hs | <span>Lil' Supa</span></li>
+                        <li>19:00hs | <span>Ayax y Prok</span></li>
+                        <li>18:00hs | <span>Foyone</span></li>
+                        <li>17:00hs | <span>Wos</span></li>
+                    </ul>
+                </div>
+                <div class="escenario rock bg-amarillo">
+                    <p class="nombre-escenario">Escenario Rock</p>
+                    <img class="imagen-calendario" src="./src/img/icono_rock.png" alt="icono-rock">
+                    <ul class="calendario">
+                        <li>16:00hs | <span>Divididos</span></li>
+                        <li>15:00hs | <span>Los Mandarinos</span></li>
+                        <li>14:00hs | <span>Todo Aparenta Normal</span></li>
+                        <li>13:00hs | <span>Los Ratones Paranoícos</span></li>
+                        <li>12:00hs | <span>Miranda</span></li>
+                        <li>11:00hs | <span>Illya Kuryaki and the Valderramas</span></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+        
+
+    </section>
+
+    <section id="galeria" class="galeria contenedor">
+        <h3>Galería</h3>
+        <ul class="galeria-imagenes">
+            
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>
+            Rock & EMD Festival, todos los derechos reservados.
+        </p>
+    </footer>
+
+
+    <script src="./build/js/bundle.js"></script>
+</body>
+
+</html>
